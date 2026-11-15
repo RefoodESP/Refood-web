@@ -12,8 +12,8 @@ export function Footer() {
             <Image
               src="/images/logo-marcanaranja.png"
               alt="ReFood España"
-              width={140}
-              height={56}
+              width={120}
+              height={117}
               className="h-12 w-auto border-0 brightness-0 invert"
             />
             <p className="mt-4 text-secondary-foreground/70 text-sm normal-case">

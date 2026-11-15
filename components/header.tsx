@@ -26,9 +26,9 @@ export function Header() {
             <Image
               src="/images/logo-marcanaranja.png"
               alt="ReFood España"
-              width={180}
-              height={72}
-              className="h-14 w-auto border-0"
+              width={140}
+              height={137}
+              className="h-12 w-auto border-0"
               priority
             />
           </Link>

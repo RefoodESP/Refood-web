@@ -10,7 +10,7 @@ export function Hero() {
           <h1
             className="text-left leading-none"
             style={{
-              fontSize: "clamp(3.5rem, 13vw, 11rem)",
+              fontSize: "clamp(2.25rem, 9.5vw, 8.75rem)",
               fontFamily: "Helvetica Neue, Helvetica, Arial, sans-serif",
               fontWeight: 900,
               letterSpacing: "-0.02em",
