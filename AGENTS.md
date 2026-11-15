@@ -7,7 +7,7 @@ Este repositorio contiene la web pública estática de **ReFood España** (`refo
 1. **Export estático estricto (`output: "export"`):**
    - No utilices `"use server"`, Server Actions, `next/headers`, `next/cookies`, rutas dinámicas sin `generateStaticParams`, ni `server-only`.
    - Mantén `trailingSlash: true` e `images: { unoptimized: true }` en `next.config.mjs`.
-   - Cualquier lógica backend debe vivir únicamente en Cloudflare Pages Functions dentro de `functions/`.
+   - Cualquier lógica backend debe vivir en `functions/` (Pages Functions) y enlazarse desde `worker.ts` + `wrangler.jsonc` para despliegue con Cloudflare Workers Static Assets (`./out`).
 2. **Sin dependencias ni enlaces de Vercel / WordPress:**
    - No reintroduzcas `@vercel/analytics` ni URLs de `vercel-storage.com`.
    - Todas las imágenes y PDFs deben servirse desde `public/images/` y `public/docs/`.
@@ -34,6 +34,7 @@ No modifiques ni inventes datos bancarios, fiscales o registrales sin verificaci
 ```bash
 npx tsc --noEmit
 npm run build
+npx --yes wrangler deploy --dry-run
 ```
 
-Comprueba además que `out/_redirects`, `out/sitemap.xml`, `out/robots.txt` y las rutas esperadas existan tras el build.
+Comprueba además que `out/_redirects`, `out/sitemap.xml`, `out/robots.txt`, `wrangler.jsonc`, `worker.ts` y las rutas esperadas existan tras el build.
