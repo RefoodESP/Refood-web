@@ -1,0 +1,445 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================================
+   REFOOD ESPAÑA - DESIGN SYSTEM
+   Based on Brand Guide v4.0
+   Aprovechar para Alimentar
+   ============================================================ */
+
+:root {
+  /* ===== REFOOD BRAND COLORS ===== */
+  /* Amarillo Refood - Color Principal (60%) */
+  --refood-yellow: #F5B72F;
+  /* Negro Refood - Secundario (30%) */
+  --refood-black: #1A1A1A;
+  /* Blanco Puro - Soporte (10%) */
+  --refood-white: #FFFFFF;
+
+  /* Accent Colors for Sections */
+  --accent-familia: #B23966;
+  --accent-comunidad: #5FB04A;
+  --accent-digital: #1F8FA8;
+  --accent-avances: #6B3B8E;
+
+  /* ===== SEMANTIC DESIGN TOKENS ===== */
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
+
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+
+  --popover: #FFFFFF;
+  --popover-foreground: #1A1A1A;
+
+  /* Primary - Amarillo Refood */
+  --primary: #F5B72F;
+  --primary-foreground: #1A1A1A;
+
+  /* Secondary - Negro Refood */
+  --secondary: #1A1A1A;
+  --secondary-foreground: #FFFFFF;
+
+  /* Muted - Light gray for backgrounds */
+  --muted: #F5F5F5;
+  --muted-foreground: #6B6B6B;
+
+  /* Accent - Same as primary for consistency */
+  --accent: #F5B72F;
+  --accent-foreground: #1A1A1A;
+
+  /* Destructive */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  /* Borders and inputs */
+  --border: #E5E5E5;
+  --input: #E5E5E5;
+  --ring: #F5B72F;
+
+  /* Charts */
+  --chart-1: #F5B72F;
+  --chart-2: #1A1A1A;
+  --chart-3: #5FB04A;
+  --chart-4: #1F8FA8;
+  --chart-5: #B23966;
+
+  /* Radius - Sharp/square aesthetic */
+  --radius: 0rem;
+
+  /* Sidebar */
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #F5B72F;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #E5E5E5;
+  --sidebar-ring: #F5B72F;
+}
+
+.dark {
+  --background: #1A1A1A;
+  --foreground: #FFFFFF;
+
+  --card: #262626;
+  --card-foreground: #FFFFFF;
+
+  --popover: #262626;
+  --popover-foreground: #FFFFFF;
+
+  --primary: #F5B72F;
+  --primary-foreground: #1A1A1A;
+
+  --secondary: #F5B72F;
+  --secondary-foreground: #1A1A1A;
+
+  --muted: #333333;
+  --muted-foreground: #A3A3A3;
+
+  --accent: #F5B72F;
+  --accent-foreground: #1A1A1A;
+
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+
+  --border: #404040;
+  --input: #404040;
+  --ring: #F5B72F;
+
+  --chart-1: #F5B72F;
+  --chart-2: #FFFFFF;
+  --chart-3: #5FB04A;
+  --chart-4: #1F8FA8;
+  --chart-5: #B23966;
+
+  --sidebar: #262626;
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: #F5B72F;
+  --sidebar-primary-foreground: #1A1A1A;
+  --sidebar-accent: #333333;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #404040;
+  --sidebar-ring: #F5B72F;
+}
+
+@theme inline {
+  /* Helvetica - Body and UI text */
+  --font-sans: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  /* Bebas Neue - Display headlines */
+  --font-display: "Bebas Neue", Impact, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius));
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 8px);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Custom Refood colors for direct use */
+  --color-refood-yellow: var(--refood-yellow);
+  --color-refood-black: var(--refood-black);
+  --color-refood-white: var(--refood-white);
+  --color-accent-familia: var(--accent-familia);
+  --color-accent-comunidad: var(--accent-comunidad);
+  --color-accent-digital: var(--accent-digital);
+  --color-accent-avances: var(--accent-avances);
+  
+  /* Animation defaults */
+  --animate-duration: 0.3s;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ===== TYPOGRAPHY - OPEN SANS HIERARCHY ===== */
+  /* Display H1 - Bebas Neue for headlines */
+  h1 {
+    @apply text-foreground;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Title H2 - Bebas Neue */
+  h2 {
+    @apply text-foreground;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  /* Subtitle H3 - Bebas Neue */
+  h3 {
+    @apply text-foreground;
+    font-family: "Bebas Neue", Impact, sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  h4 {
+    @apply text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  /* Body */
+  p {
+    @apply text-foreground;
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+
+  /* Label */
+  .label-text {
+    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  a {
+    @apply text-primary;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  strong, b {
+    font-weight: 700;
+  }
+}
+
+/* ===== REFOOD CUSTOM COMPONENTS ===== */
+
+/* Yellow highlight bar (for nucleus names) */
+.refood-bar {
+  @apply bg-primary text-primary-foreground;
+  padding: 0.5rem 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Icon squares - yellow background, white icons */
+.refood-icon {
+  @apply bg-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0;
+}
+
+.refood-icon svg {
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 2.5;
+}
+
+/* Section accent colors */
+.section-familia {
+  --section-accent: var(--accent-familia);
+}
+
+.section-comunidad {
+  --section-accent: var(--accent-comunidad);
+}
+
+.section-digital {
+  --section-accent: var(--accent-digital);
+}
+
+.section-avances {
+  --section-accent: var(--accent-avances);
+}
+
+/* Key messages styling */
+.mensaje-clave {
+  @apply text-foreground;
+  font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+/* CTA buttons with Refood styling */
+.btn-refood {
+  @apply bg-primary text-primary-foreground;
+  font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-refood:hover {
+  @apply bg-secondary text-secondary-foreground;
+  text-decoration: none;
+}
+
+.btn-refood-outline {
+  @apply bg-transparent text-secondary border-2 border-secondary;
+  font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-refood-outline:hover {
+  @apply bg-secondary text-secondary-foreground;
+  text-decoration: none;
+}
+
+/* Card with yellow accent */
+.card-refood {
+  @apply bg-card;
+  border: 2px solid var(--border);
+  border-radius: 0;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.card-refood:hover {
+  border-color: var(--primary);
+  box-shadow: 4px 4px 0px rgba(245, 183, 47, 0.5);
+}
+
+/* Stats/impact numbers */
+.stat-number {
+  @apply text-primary;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.stat-label {
+  @apply text-foreground;
+  font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Photo styling - documentary, no filters */
+.foto-refood {
+  border-radius: 0;
+  object-fit: cover;
+}
+
+/* Testimonial/quote styling */
+.cita-refood {
+  @apply text-foreground;
+  font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  border-left: 4px solid var(--primary);
+  padding-left: 1.5rem;
+}
+
+/* Navigation link active state */
+.nav-link-active {
+  @apply text-primary;
+  font-weight: 700;
+}
+
+/* Section divider with yellow accent */
+.divider-refood {
+  width: 80px;
+  height: 4px;
+  @apply bg-primary;
+  border-radius: 0;
+}
+
+/* Smooth scroll offset for fixed header */
+section[id] {
+  scroll-margin-top: 80px;
+}

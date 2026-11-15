@@ -1,0 +1,57 @@
+# WordPress -> Static Next.js 301 Redirects for Cloudflare Pages
+# Keep all paths UTF-8 without BOM and LF line endings.
+
+/que-hacemos/ /#que-es 301
+/que-hacemos /#que-es 301
+/quienes-somos/ /#que-es 301
+/quienes-somos /#que-es 301
+/contacto/ /#contacto 301
+/contacto /#contacto 301
+/voluntariado/ /#sumate 301
+/voluntariado /#sumate 301
+/beneficiarias/ /solicitar-ayuda/ 301
+/beneficiarias /solicitar-ayuda/ 301
+/donantes/ /quiero-colaborar/ 301
+/donantes /quiero-colaborar/ 301
+/socias/ /quiero-ser-socio/ 301
+/socias /quiero-ser-socio/ 301
+/colaboracion-economica/ /quiero-colaborar-economicamente/ 301
+/colaboracion-economica /quiero-colaborar-economicamente/ 301
+/politica-de-privacidad/ /privacidad/ 301
+/politica-de-privacidad /privacidad/ 301
+/%F0%9F%8D%AA-politica-de-cookies/ /legal/#cookies 301
+/%F0%9F%8D%AA-politica-de-cookies /legal/#cookies 301
+/%f0%9f%8d%aa-politica-de-cookies/ /legal/#cookies 301
+/%f0%9f%8d%aa-politica-de-cookies /legal/#cookies 301
+/politica-de-cookies/ /legal/#cookies 301
+/politica-de-cookies /legal/#cookies 301
+/aviso-legal/ /legal/ 301
+/aviso-legal /legal/ 301
+/cookies/ /legal/#cookies 301
+/cookies /legal/#cookies 301
+
+# Legacy WordPress PDF attachments -> local compressed /docs/
+/wp-content/uploads/2026/06/MEMORIA-2025.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/06/MEMORIA-2025-1.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/06/MEMORIA-2025-2.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/06/MEMORIA-2025-3.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/06/MEMORIA-2025-4.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/06/MEMORIA-2025-5.pdf /docs/memoria-2025.pdf 301
+/wp-content/uploads/2026/01/MEMORIA-2024.pdf /docs/memoria-2024.pdf 301
+/wp-content/uploads/2024/09/memoria-anual-2023-refood-tetuan.pdf /docs/memoria-2023.pdf 301
+/wp-content/uploads/2023/06/memoria-anual-2022.pdf /docs/memoria-2022.pdf 301
+/wp-content/uploads/2022/07/memoria-refood-2021.pdf /docs/memoria-2021.pdf 301
+/wp-content/uploads/2023/02/memoria-refood-2020.pdf /docs/memoria-2020.pdf 301
+/wp-content/uploads/2021/01/memoria-anual-2020-2.pdf /docs/memoria-2020.pdf 301
+/wp-content/uploads/2025/08/20250820_politica-de-privacidad-de-refood-espana.pdf /docs/politica-de-privacidad-2025.pdf 301
+/wp-content/uploads/2024/09/20240818_politica-de-privacidad-de-refood-espana.pdf /docs/politica-de-privacidad-2025.pdf 301
+/wp-content/uploads/2022/05/programa-de-voluntariado-refood-tetuan.pdf /docs/programa-voluntariado-tetuan.pdf 301
+/wp-content/uploads/2025/05/20250420_politica-de-cookies.pdf /legal/#cookies 301
+/wp-content/uploads/2025/05/20250420_politica-de-cookies-1.pdf /legal/#cookies 301
+/wp-content/uploads/2025/05/20250420_politica-de-cookies-2.pdf /legal/#cookies 301
+/wp-content/uploads/2025/05/20250420_politica-de-cookies-3.pdf /legal/#cookies 301
+/wp-content/uploads/2022/05/refood-espana-colaboracion-economica-1.pdf /quiero-colaborar-economicamente/ 301
+/wp-content/uploads/2022/05/tabla-informativa-pol.-privacidad-tabla-pol.-priv-benef.pdf /privacidad/ 301
+/wp-content/uploads/2022/05/tabla-informativa-pol.-privacidad-tabla-pol.-priv-socias.pdf /privacidad/ 301
+/wp-content/uploads/2022/05/tabla-informativa-pol.-privacidad-tabla-pol.-priv-voluntarias.pdf /privacidad/ 301
+/wp-content/uploads/2021/03/refood-espana.pdf /memoria-anual/ 301
